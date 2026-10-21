@@ -1,0 +1,11 @@
+# 构建产物
+/plugin.bin
+/release/
+*.kpp
+dist/
+node_modules/
+
+# 插件运行时在本地产生的数据
+/data
+
+.DS_Store

@@ -1,0 +1,76 @@
+{
+  "plugin_id": "com.kimposoft.formcontrollers",
+  "name": {
+    "zh_CN": "表单动作",
+    "en_US": "Form Controllers"
+  },
+  "version": "1.0.1",
+  "sdk_version": "1.1.0-tp.20",
+  "kimpo_version": ">=1.0.0",
+  "i18n": {
+    "namespace": "com.kimposoft.formcontrollers",
+    "locales": [
+      "zh-CN",
+      "en-US"
+    ],
+    "path": "frontend/locales",
+    "default_locale": "zh-CN"
+  },
+  "category": "action",
+  "author": {
+    "name": "KimpoSoft Team"
+  },
+  "description": {
+    "zh_CN": "提供表单操作与联动表单两个动作，让表单之间的操作衔接更顺畅。",
+    "en_US": "Actions for operating on forms and opening linked forms."
+  },
+  "entry": {
+    "backend": "plugin.bin"
+  },
+  "process": {
+    "memory_limit_mb": 0
+  },
+  "trust_level": "trusted",
+  "dependencies": {
+    "platform": ">=1.0.0",
+    "plugins": []
+  },
+  "permissions": {
+    "network": [],
+    "storage": false,
+    "exec": false
+  },
+  "api_scope": {
+    "allowed_rpcs": [
+      "kimpo.plugins.host.v1.LogService/Write",
+      "kimpo.plugins.host.v1.LogService/WriteBatch"
+    ]
+  },
+  "data_access": {
+    "allowed_models": ["record"],
+    "tenant_scoped": true,
+    "fields": {"record": ["*"]}
+  },
+  "lifecycle": {
+    "allow_multiple_config_instances": false,
+    "max_config_instances": 1
+  },
+  "capabilities": {
+    "runtime_kinds": [
+      "action"
+    ],
+    "directions": [
+      "biz"
+    ],
+    "backend_services": [
+      "kimpo-form-controllers"
+    ],
+    "features": [
+      "alice-prepared-dispatch"
+    ]
+  },
+  "schema_compatibility": {
+    "system.lifecycle": { "min_version": 1 },
+    "system.log": { "min_version": 1 }
+  }
+}

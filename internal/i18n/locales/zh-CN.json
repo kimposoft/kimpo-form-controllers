@@ -1,0 +1,5 @@
+{
+  "action.unknown": "未知动作: {action}",
+  "form_control.bad_op": "op 必须为 save/close/edit 之一",
+  "form_control.result_failed": "编码表单操作结果失败: {detail}"
+}

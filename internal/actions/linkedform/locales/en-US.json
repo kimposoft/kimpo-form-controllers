@@ -1,0 +1,9 @@
+{
+  "linked_form.no_template": "Linked-form action is missing the target template setting (template_id)",
+  "linked_form.no_query": "Linked-form open mode is missing the query setting",
+  "linked_form.no_host": "Linked-form action cannot continue because HostServices is unavailable",
+  "linked_form.fill_bad_ref": "Fill expressions may only reference current-form fields/system variables/constants (referenced target template table {alias}, whose record does not exist yet when creating)",
+  "linked_form.v1_unsupported_open": "Linked-form \"open\" received no query result (node {node_id}, target template {template_id}). Common cause: the open condition references a detail-table field of the current form other than the table holding the triggering row. Adjust the open condition and retry; if the condition is correct, ask an administrator to check the system log",
+  "linked_form.v1_unsupported_create": "Linked-form \"create/fill\" received no prefill result (node {node_id}, target template {template_id}). Common cause: a fill expression references a detail-table field of the current form other than the table holding the triggering row. Adjust the fill mapping and retry; if the mapping is correct, ask an administrator to check the system log",
+  "linked_form.result_encode_failed": "Failed to encode execution result: {detail}"
+}

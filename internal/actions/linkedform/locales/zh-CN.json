@@ -1,0 +1,9 @@
+{
+  "linked_form.no_template": "联动表单动作缺少目标模板设置 template_id",
+  "linked_form.no_query": "联动表单打开模式缺少查询设置 query",
+  "linked_form.no_host": "宿主服务（HostServices）不可用，联动表单动作无法继续",
+  "linked_form.fill_bad_ref": "填充表达式只能引用本表单字段/系统变量/常量（引用了目标模板表 {alias}，新建时目标记录尚不存在）",
+  "linked_form.v1_unsupported_open": "联动表单「打开」没有拿到查询结果（节点 {node_id}，目标模板 {template_id}）。常见原因：打开条件引用了本表单中触发行所在表以外的明细表字段。请调整打开条件后重试；若条件无误，请联系管理员查看系统日志",
+  "linked_form.v1_unsupported_create": "联动表单「新建填充」没有拿到预填结果（节点 {node_id}，目标模板 {template_id}）。常见原因：填充表达式引用了本表单中触发行所在表以外的明细表字段。请调整填充映射后重试；若映射无误，请联系管理员查看系统日志",
+  "linked_form.result_encode_failed": "编码执行结果失败: {detail}"
+}

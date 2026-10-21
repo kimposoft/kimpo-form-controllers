@@ -1,0 +1,9 @@
+{
+  "linked_form.no_template": "聯動表單動作缺少目標範本設定 template_id",
+  "linked_form.no_query": "聯動表單開啟模式缺少查詢設定 query",
+  "linked_form.no_host": "宿主服務（HostServices）無法使用，聯動表單動作無法繼續",
+  "linked_form.fill_bad_ref": "填入運算式只能引用本表單欄位、系統變數或常數（引用了目標範本表 {alias}，新增時目標記錄尚不存在）",
+  "linked_form.v1_unsupported_open": "聯動表單「開啟」沒有取得查詢結果（節點 {node_id}，目標範本 {template_id}）。常見原因：開啟條件引用了本表單中觸發列所在表以外的明細表欄位。請調整開啟條件後重試；若條件無誤，請聯絡管理員查看系統日誌",
+  "linked_form.v1_unsupported_create": "聯動表單「新增填入」沒有取得預填結果（節點 {node_id}，目標範本 {template_id}）。常見原因：填入運算式引用了本表單中觸發列所在表以外的明細表欄位。請調整填入對應後重試；若對應無誤，請聯絡管理員查看系統日誌",
+  "linked_form.result_encode_failed": "編碼執行結果失敗：{detail}"
+}

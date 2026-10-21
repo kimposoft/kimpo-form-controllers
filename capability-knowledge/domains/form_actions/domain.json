@@ -1,0 +1,64 @@
+{
+  "code": "form_actions",
+  "name": {
+    "zh-CN": "表单动作",
+    "zh-TW": "表單動作",
+    "en-US": "Form Actions",
+    "ja-JP": "フォームアクション"
+  },
+  "summary": {
+    "zh-CN": "驱动当前表单自身操作（保存/关闭/切换编辑）与联动打开或新建关联单据的动作节点。",
+    "zh-TW": "驅動當前表單自身操作（保存/關閉/切換編輯）與聯動開啟或新建關聯單據的動作節點。",
+    "en-US": "Action nodes that drive this form's own save/close/edit, or open/create a linked record in another template.",
+    "ja-JP": "現在のフォーム自身の操作（保存・閉じる・編集切替）や、関連テンプレートの伝票を開く・新規作成するアクションノード。"
+  },
+  "capabilities": [
+    {
+      "code": "form_operation",
+      "name": {
+        "zh-CN": "表单操作",
+        "zh-TW": "表單操作",
+        "en-US": "Form operation",
+        "ja-JP": "フォーム操作"
+      },
+      "summary": {
+        "zh-CN": "让动作链驱动当前表单执行保存、关闭或切换到编辑，与用户手点对应按钮走的是同一条流程。",
+        "zh-TW": "讓動作鏈驅動當前表單執行保存、關閉或切換到編輯，與使用者手點對應按鈕走的是同一條流程。",
+        "en-US": "Lets an action chain trigger this form's own save, close, or switch-to-edit, the same path as clicking that button.",
+        "ja-JP": "アクションチェーンから現在のフォームの保存・閉じる・編集切替を実行させる。ユーザーが対応ボタンを押した場合と同じ経路をたどる。"
+      },
+      "intents": ["自动保存", "自动关闭", "切到编辑", "触发保存", "关闭窗口"],
+      "category": "design",
+      "contracts": [],
+      "capability_full_name": "",
+      "boundary_points": [
+        "只支持保存、关闭、切换到编辑三种操作，没有提交、暂存、撤销",
+        "本节点不直接写业务数据，写入发生在它调用的保存流程内"
+      ]
+    },
+    {
+      "code": "linked_form",
+      "name": {
+        "zh-CN": "联动表单",
+        "zh-TW": "聯動表單",
+        "en-US": "Linked form",
+        "ja-JP": "連動フォーム"
+      },
+      "summary": {
+        "zh-CN": "在当前单据触发时，新建或按条件打开另一个模板的表单，可按表达式预填字段，也可以把结果写回当前表单。",
+        "zh-TW": "在當前單據觸發時，新建或按條件開啟另一個範本的表單，可按表達式預填欄位，也可以把結果寫回當前表單。",
+        "en-US": "Creates a new form, or opens an existing one by condition, in another template; can prefill and write results back.",
+        "ja-JP": "現在の伝票のトリガーから、別テンプレートのフォームを条件で開く、または新規作成する。式によるフィールド事前入力や、結果の現フォームへの書き戻しも可能。"
+      },
+      "intents": ["联动表单", "打开关联单据", "新建关联单据", "主从单据", "预填字段", "写回本单"],
+      "category": "design",
+      "contracts": [],
+      "capability_full_name": "",
+      "boundary_points": [
+        "打开条件只能查目标模板的主表字段，不能按明细表字段定位",
+        "条件引用本表单明细字段时，只能引用触发动作的那一行",
+        "写回只能把新表单的值写回当前表单，不能反向修改当前表单"
+      ]
+    }
+  ]
+}
